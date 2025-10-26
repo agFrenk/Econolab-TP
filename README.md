@@ -16,12 +16,12 @@
 ## 1. Producción
 
 **Variables:**
-- $ X_1$: cantidad física de maíz producida (bien-salario)  
-- $ X_2 $: cantidad física de oro producida (bien-lujo)  
-- $ N_1 $: trabajadores empleados en agricultura  
-- $ N_2 $: trabajadores empleados en la producción de oro  
-- $ N $: trabajadores totales en la economía
-- $ f(\cdot) $: **función de producción agrícola**, que describe la relación entre el número de trabajadores empleados y la cantidad de maíz obtenida.  
+- $X_1$: cantidad física de maíz producida (bien-salario)  
+- $X_2$: cantidad física de oro producida (bien-lujo)  
+- $N_1$: trabajadores empleados en agricultura  
+- $N_2$: trabajadores empleados en la producción de oro  
+- $N$: trabajadores totales en la economía
+- $f(\cdot)$: **función de producción agrícola**, que describe la relación entre el número de trabajadores empleados y la cantidad de maíz obtenida.  
   - Refleja el uso de **tierra de calidad decreciente**: a medida que se emplean más trabajadores, se incorporan tierras menos fértiles y el producto marginal del trabajo cae.
 - $a$ : productividad del trabajo en ese sector, es decir, cuántas unidades de oro produce un trabajador por año.
 
@@ -53,9 +53,9 @@ Interpretación:
 ## 2. Salarios y capital
 
 **Variables:**
-- $ W $: masa salarial total (en unidades físicas de maíz)  
-- $ x $: salario real por trabajador (en unidades de maíz)  
-- $ K $: capital total, equivalente a los salarios adelantados
+- $W$: masa salarial total (en unidades físicas de maíz)  
+- $x$: salario real por trabajador (en unidades de maíz)  
+- $K$: capital total, equivalente a los salarios adelantados
 
 **Ecuaciones:**
 
@@ -76,7 +76,7 @@ No hay capital fijo ni depreciación.
 ## 3. Renta de la tierra
 
 **Variable:**
-- $ R $: renta total (en unidades de maíz)
+- $R$: renta total (en unidades de maíz)
 
 **Ecuación:**
 
@@ -93,9 +93,9 @@ Proviene de los **rendimientos decrecientes** de la producción agrícola.
 ## 4. Beneficios
 
 **Variables:**
-- $ \pi_1 $: beneficio del sector agrícola  
-- $ \pi $: beneficio total del sistema (en unidades de oro)  
-- $ p_1, p_2 $: precios del maíz y del oro, medidos en oro
+- $\pi_1$: beneficio del sector agrícola  
+- $\pi$: beneficio total del sistema (en unidades de oro)  
+- $p_1, p_2$: precios del maíz y del oro, medidos en oro
 
 **Ecuaciones:**
 
@@ -117,9 +117,9 @@ Los beneficios son el **remanente del producto total** después de pagar salario
 ## 5. Ecuaciones de valor (teoría del trabajo)
 
 **Variables:**
-- $ p_1, p_2 $: precios relativos expresados en oro  
-- $ N_1, N_2 $: cantidad de trabajo empleada  
-- $ X_1, X_2 $: productos físicos
+- $p_1, p_2$: precios relativos expresados en oro  
+- $N_1, N_2$: cantidad de trabajo empleada  
+- $X_1, X_2$: productos físicos
 
 **Ecuaciones:**
 
@@ -160,8 +160,8 @@ No hay ahorro improductivo: se cumple la **Ley de Say** (todo ingreso se gasta).
 ## 7. Datos exógenos (condiciones naturales)
 
 **Variables exógenas:**
-- $ \bar{x} $: salario real “natural” (nivel de subsistencia o reproducción estable de la población)  
-- $ \bar{K} $: capital disponible al inicio del período
+- $\bar{x}$: salario real “natural” (nivel de subsistencia o reproducción estable de la población)  
+- $\bar{K}$: capital disponible al inicio del período
 
 **Ecuaciones:**
 
@@ -182,8 +182,8 @@ El salario natural asegura una población constante y el capital inicial permite
 ## 8. Tasa de ganancia y salario monetario
 
 **Variables:**
-- $ r $: tasa de ganancia (en unidades físicas de maíz o proporción del capital)  
-- $ w $: salario monetario (en unidades de oro)
+- $r$: tasa de ganancia (en unidades físicas de maíz o proporción del capital)  
+- $w$: salario monetario (en unidades de oro)
 
 **Ecuaciones:** (QUEDA DISCUTIR SI LA GANANCIA ES EN ORO O EN MAIZ)
 
@@ -225,11 +225,11 @@ Garantiza que exista un punto intermedio de equilibrio.
 ## 10. Dinámica (crecimiento y población)
 
 **Variables:**
-- $ N(t) $: población en el tiempo  
-- $ K(t) $: capital en el tiempo  
-- $ \pi $: beneficios totales  
-- $ F(\cdot) $: función de ajuste demográfico  
-- $ \Phi(\cdot) $: función de acumulación de capital
+- $N(t)$: población en el tiempo  
+- $K(t)$: capital en el tiempo  
+- $\pi$: beneficios totales  
+- $F(\cdot)$: función de ajuste demográfico  
+- $\Phi(\cdot)$: función de acumulación de capital
 
 **Ecuaciones:**
 
@@ -248,7 +248,7 @@ Interpretación:
 - Si hay beneficios, el capital se acumula.  
 - Ambos mecanismos impulsan la **dinámica del crecimiento**.
 
-## Conexión entre \(r_1, r_2\) y la asignación sectorial
+## Conexión entre $\(r_1, r_2\)$ y la asignación sectorial
 
 ### 🔹 Versión discreta
 
