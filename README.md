@@ -2,7 +2,7 @@
 # Modelo Ricardiano según Pasinetti (1960)
 
 > [!NOTE]
-> Resumen generado por IA del modelo de Pasinetti
+> Resumen generado por IA del modelo de Pasinetti, los nombres de las variables no coinciden con los de la implementación
 
 ## Supuestos
 - Dos bienes: 
