@@ -1,7 +1,7 @@
 # Econolab-TP
 # Modelo Ricardiano según Pasinetti (1960)
 
-> [!NOTA]
+> [!NOTE]
 > Resumen generado por IA del modelo de Pasinetti
 
 ## Supuestos
