@@ -1,6 +1,9 @@
 # Econolab-TP
 # Modelo Ricardiano según Pasinetti (1960)
 
+> [!NOTA]
+> Resumen generado por IA del modelo de Pasinetti
+
 ## Supuestos
 - Dos bienes: 
   - Bien-salario (1): maíz  
