@@ -24,7 +24,7 @@ model RicardoPasinetti_ConCapitalGoods_corregido
   // ===== Estados =====
   Real K(start = 1);
   
-  Real N(start = 10)"Población/empleo total";
+  Real N(start = 20)"Población/empleo total";
 
   // ===== Empleo por sector =====
   Real N1  "Empleo sector 1 (agro)";
@@ -34,7 +34,7 @@ model RicardoPasinetti_ConCapitalGoods_corregido
   // ===== Outputs =====
   Real Y1 "Output sector 1 (alimentos/agro)";
   Real Y2 "Output sector 2 (oro)";
-  Real Y3(start = 1)"Output sector 3 (bienes de capital)";
+  Real Y3(start = 6)"Output sector 3 (bienes de capital)";
 
   // ===== Producto marginal y precios =====
   Real MPL "Producto marginal del trabajo (sector 1)";
@@ -80,7 +80,8 @@ equation
 // La inversión agregada en términos reales es beta * P_real.
 // La producción física de bienes de capital Y3 debe igualarla.
 // Preguntar con martin si queremos que se mantenga la igualdad Y3 = I o  queremos que la maquinaria del sector 3
-  Y3 = A3 * I * M3 ^ alpha3 * N3^a3 ;
+//  Y3 = A3 * I * M3 ^ alpha3 * N3^a3 ;
+  Y3 = I;
   MPL3 = a3*A3*N3^(a3 - 1);
   p3 = 1/MPL3;
   der(M1) = I1 - delta*M1;
