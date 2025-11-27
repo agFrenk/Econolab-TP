@@ -1,3 +1,8 @@
+// Revisar
+// 1. Unidades de precios
+// 2. Y3 = I ?
+// 3. Revisar valores de parametros
+
 model RicardoPasinetti_ConCapitalGoods_corregido
   // ===== Parámetros sector 1 (agro) =====
   parameter Real A = 2 "Productividad sector 1";
@@ -9,15 +14,15 @@ model RicardoPasinetti_ConCapitalGoods_corregido
   parameter Real alpha2 = 0.4;
   
   // ===== Parámetros sector 3 (bienes de capital) =====
-  parameter Real A3 = 2.5 "Productividad sector 3 (bienes de capital)";
-  parameter Real a3 = 0.6 "Elasticidad laboral sector 3";
+  parameter Real A3 = 1 "Productividad sector 3 (bienes de capital)";
+  parameter Real a3 = 0.5 "Elasticidad laboral sector 3";
   parameter Real beta = 1 "Sensibilidad de la inversión a beneficios reales";
-  parameter Real delta = 0.4 "Tasa de depreciación del capital";
-  parameter Real alpha3 = 0.2;
+  parameter Real delta = 0.5 "Tasa de depreciación del capital";
+  parameter Real alpha3 = 0.1;
 
   // ===== Dinámica poblacional =====
   parameter Real gamma = 5 "Velocidad de ajuste poblacional";
-  parameter Real wS = 0.1 "Salario natural/subsistencia";
+  parameter Real wS = 0.5 "Salario natural/subsistencia";
   Real W;
   Real w;
 
@@ -35,7 +40,6 @@ model RicardoPasinetti_ConCapitalGoods_corregido
   Real Y1 "Output sector 1 (alimentos/agro)";
   Real Y2 "Output sector 2 (oro)";
   Real Y3(start = 6)"Output sector 3 (bienes de capital)";
-
   // ===== Producto marginal y precios =====
   Real MPL "Producto marginal del trabajo (sector 1)";
   Real MPL3 "Producto marginal del trabajo (sector 3)";
@@ -73,17 +77,16 @@ equation
 // Si querés forzar N1 como residuo, podés usar:
 // N1 = N - N2 - N3;
 // ===== Inversion  =====
-  I1 = (alpha1/(alpha1 + alpha3))*Y3;
-  I3 = (alpha3/(alpha1 + alpha3))*Y3;
-  I = I1 + I3;
+  I1 = (alpha1/(alpha1 + alpha3))*I;
+  I3 = (alpha3/(alpha1 + alpha3))*I;
+  
+  I = Y3;
 // ===== Sector 3: bienes de capital =====
-// La inversión agregada en términos reales es beta * P_real.
-// La producción física de bienes de capital Y3 debe igualarla.
-// Preguntar con martin si queremos que se mantenga la igualdad Y3 = I o  queremos que la maquinaria del sector 3
-//  Y3 = A3 * I * M3 ^ alpha3 * N3^a3 ;
-  Y3 = I;
+  Y3 = (p1/p3) * A3 * M3 ^ alpha3 * N3^a3 ;
+  
   MPL3 = a3*A3*N3^(a3 - 1);
   p3 = 1/MPL3;
+
   der(M1) = I1 - delta*M1;
   der(M3) = I3 - delta*M3;
   M = M1 + M3;
