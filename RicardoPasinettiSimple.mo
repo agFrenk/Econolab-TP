@@ -8,13 +8,13 @@ model RicardoPasinetti_SimpleAligned
   parameter Real wS = 0.5 "Salario natural/subsistencia";
   // ===== Condiciones iniciales (como en R) =====
   parameter Real K0 = 1;
-  parameter Real N0 = 2;
+  parameter Real N0 = 20;
   // ===== Estados =====
   Real K(start = K0) "Capital";
   Real N(start = N0) "Población/empleo total";
   // ===== Variables de sector y precios =====
-  Real N1(start = 1) "Empleo sector 1 (pista de inicio)";
-  Real N2(start = 1) "Empleo sector 2 (pista de inicio)";
+  Real N1 "Empleo sector 1 (pista de inicio)";
+  Real N2 "Empleo sector 2 (pista de inicio)";
   Real Y1 "Output sector 1";
   Real Y2 "Output sector 2";
   Real MPL "Producto marginal del trabajo (sector 1)";
