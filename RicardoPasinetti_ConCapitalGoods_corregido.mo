@@ -12,7 +12,7 @@ model RicardoPasinetti_ConCapitalGoods_corregido
   // ===== Parámetros sector 3 (bienes de capital) =====
   parameter Real A3 = 1 "Productividad sector 3 (bienes de capital)";
   parameter Real a3 = 0.5 "Elasticidad laboral sector 3";
-  parameter Real delta = 0.5 "Tasa de depreciación del capital";
+  parameter Real delta = 0.3 "Tasa de depreciación del capital";
   parameter Real alpha3 = 0.78;
   // ===== Dinámica poblacional =====
   parameter Real gamma = 5 "Velocidad de ajuste poblacional";
@@ -55,7 +55,7 @@ equation
 // Tecnología Cobb-Douglas en K y N1
   Y1 = A*M1^alpha1*N1^a1;
   Y1_p = Y1*p1;
-  MPL = a1*A*N1^(a1 - 1);
+  MPL = a1*A*N1^(a1 - 1)*M1^alpha1;
   p1 = 1/MPL;
 // Renta (parte del producto que va a terratenientes)
   R = Y1*(1 - a1);
@@ -80,7 +80,7 @@ equation
 // ===== Sector 3: bienes de capital =====
   Y3 = (p1/p3)*A3*(M3^alpha3)*(N3^a3);
   Y3_p = Y3 *p3;
-  MPL3 = a3*A3*N3^(a3 - 1);
+  MPL3 = a3*A3*(N3^(a3 - 1))* M3^alpha3;
   p3 = 1/MPL3;
   der(M1) = I1 - delta*M1;
   der(M3) = I3 - delta*M3;
@@ -98,5 +98,5 @@ equation
   w = W/N;
   der(N) = gamma*(w - wS);
   annotation(
-    experiment(StartTime = 0, StopTime = 100, Tolerance = 1e-06, Interval = 0.2));
+    experiment(StartTime = 0, StopTime = 10000, Tolerance = 1e-06, Interval = 0.2));
 end RicardoPasinetti_ConCapitalGoods_corregido;
